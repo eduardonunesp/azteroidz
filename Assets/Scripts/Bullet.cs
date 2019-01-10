@@ -12,16 +12,11 @@ public class Bullet : MonoBehaviour
   private void Awake()
   {
     bulletCollider2D = GetComponent<Collider2D>();
-    Invoke("DestroyProjectile", lifeTime);
+    Destroy(gameObject, lifeTime);
   }
 
   private void Update()
   {
     transform.Translate(Vector2.up * speed * Time.deltaTime);
-  }
-
-  void DestroyProjectile()
-  {
-    Destroy(gameObject);
   }
 }

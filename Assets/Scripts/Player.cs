@@ -72,9 +72,6 @@ public class Player : ScreenWrappable
       Instantiate(bullet, transform.position, transform.rotation);
     }
 
-
-
-
     CheckWraping();
   }
 }
